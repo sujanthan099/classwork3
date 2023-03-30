@@ -1,0 +1,21 @@
+void printEvenOddNumbers(int start, int end, int isEven) {
+
+    if (start > end) {
+
+        return;
+
+    }
+
+    if (isEven && start % 2 == 0) {
+
+        printf("%d ", start);
+
+    } else if (!isEven && start % 2 != 0) {
+
+        printf("%d ", start);
+
+    }
+
+    printEvenOddNumbers(start + 1, end, isEven);
+
+}
