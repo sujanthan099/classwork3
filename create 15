@@ -1,0 +1,15 @@
+int reverseNumber(int num) {
+
+    if (num < 10) {
+
+        return num;
+
+    }
+
+    int lastDigit = num % 10;
+
+    int remainingDigits = num / 10;
+
+    return (reverseNumber(remainingDigits) * 10) + lastDigit;
+
+}
