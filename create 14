@@ -1,0 +1,23 @@
+int sumOfEvenOrOddNumbersInRange(int start, int end, int type) {
+
+    if (start > end) {
+
+        return 0;
+
+    }
+
+    if (type == 0 && start % 2 == 0) {
+
+        return start + sumOfEvenOrOddNumbersInRange(start + 2, end, type);
+
+    }
+
+    if (type == 1 && start % 2 != 0) {
+
+        return start + sumOfEvenOrOddNumbersInRange(start + 2, end, type);
+
+    }
+
+    return sumOfEvenOrOddNumbersInRange(start + 1, end, type);
+
+}
